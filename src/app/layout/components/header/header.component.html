@@ -1,5 +1,5 @@
-<div class="responsive-sidebar-menu">
-  <div class="overlay"></div>
+<div class="responsive-sidebar-menu" [ngClass]="{'active': toggleSideNav}" >
+  <div class="overlay" (click)="hideSidebar()"></div>
   <div class="sidebar-menu-inner">
     <div class="menu-wrap">
       <p>Menu</p>
@@ -35,11 +35,6 @@
           </a>
         </li>
         <li>
-          <a class="scroll-to" href="#testimonial">
-            <i class="lar la-comment"></i> <span>Testimonial</span>
-          </a>
-        </li>
-        <li>
           <a class="scroll-to" href="#contact">
             <i class="las la-envelope"></i> <span>Contact</span>
           </a>
@@ -51,15 +46,18 @@
     <div class="sidebar-social">
       <p>Social</p>
       <ul class="social-links d-flex align-items-center">
-        <li>
-          <a href=""><i class="lab la-twitter"></i></a>
-        </li>
-        <li>
-          <a href=""><i class="lab la-dribbble"></i></a>
-        </li>
-        <li>
-          <a href=""><i class="lab la-instagram"></i></a>
-        </li>
+  <li>
+    <a href="https://twitter.com/abhisheknayarIN" target="_blank"><i class="lab la-twitter"></i></a>
+  </li>
+  <li>
+    <a href="https://www.linkedin.com/in/abhishek-nayar-4097687b" target="_blank"><i class="lab la-linkedin"></i></a>
+  </li>
+  <li>
+    <a href="#"><i class="lab la-instagram"></i></a>
+  </li>
+  <li>
+    <a href="https://github.com/codebyabhisheknayar/portfolio"><i class="lab la-github"></i></a>
+  </li>
       </ul>
     </div>
   </div>
@@ -94,11 +92,6 @@
   <li>
     <a class="scroll-to" href="#portfolio">
       <span>Portfolios</span> <i class="las la-grip-vertical"></i>
-    </a>
-  </li>
-  <li>
-    <a class="scroll-to" href="#testimonial">
-      <span>Testimonial</span> <i class="lar la-comment"></i>
     </a>
   </li>
   <li>

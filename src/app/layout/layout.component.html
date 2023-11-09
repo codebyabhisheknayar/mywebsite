@@ -1,12 +1,12 @@
 <div class="page-loader" [ngClass]="{ 'fade-out': !showLoader }">
   <div class="bounceball"></div>
 </div>
-    <span class="icon-menu">
+    <span class="icon-menu" (click)="onToggle()">
       <span class="bar"></span>
       <span class="bar"></span>
     </span>
     <div class="global-color">
-      <span class="setting-toggle">
+      <span class="setting-toggle no-cursor">
         <i class="las la-cog"></i>
       </span>
       <div class="inner">
@@ -42,9 +42,9 @@
         </div>
       </div>
     </div>
-    <app-header></app-header>
+    <app-header [toggleSideNav]="onToggleSideNav" (toggleSideClose)="onToggleSideNavF()"></app-header>
     <app-sidebar></app-sidebar>
-    <main class="drake-main">
+    <main class="ask-main">
       <div id="smooth-wrapper">
         <div id="smooth-content">
 

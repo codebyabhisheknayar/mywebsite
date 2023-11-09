@@ -10,6 +10,7 @@ import gsap from "gsap";
 export class LayoutComponent implements OnInit {
 
   showLoader = true;
+  onToggleSideNav: boolean = false;
 
   constructor() {
     MouseFollower.registerGSAP(gsap);
@@ -24,4 +25,10 @@ export class LayoutComponent implements OnInit {
     }, 3000);
   }
 
+  onToggle() {
+    this.onToggleSideNav = !this.onToggleSideNav;
+  }
+  onToggleSideNavF(){
+    this.onToggleSideNav = !this.onToggleSideNav;
+  }
 }
