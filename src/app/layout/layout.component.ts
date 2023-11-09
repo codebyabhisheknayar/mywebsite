@@ -15,7 +15,11 @@ export class LayoutComponent implements OnInit {
   constructor() {
     MouseFollower.registerGSAP(gsap);
     const cursor = new MouseFollower({
-      speed: 0.8
+      speed: 0.8,
+      className: 'mf-cursor lg',
+      stateDetection: {
+        'cursor-xl': 'a,button,.icon-menu',
+      },
     });
   }
 

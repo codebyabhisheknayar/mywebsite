@@ -6,3 +6,21 @@
        background-color: #3498db;
        border-radius: 50%;
      }
+
+::ng-deep{
+.mf-cursor{
+  &.lg{
+    &::before{
+  transform: scale(.5);
+  background-color: #4bffa5;
+  opacity: .4;
+  }
+  &.cursor-xl{
+    &::before{
+      transform: scale(1.6);
+      opacity: .1;
+    }
+  }
+}
+}
+}

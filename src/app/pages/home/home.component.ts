@@ -6,6 +6,7 @@ import { EmailService } from 'src/app/services/email.service';
 import { FormBuilder, FormGroup, FormGroupDirective, Validators } from '@angular/forms';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Lightbox, IAlbum } from 'ngx-lightbox';
+import Typed from 'typed.js';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -20,6 +21,8 @@ import { Lightbox, IAlbum } from 'ngx-lightbox';
 })
 export class HomeComponent implements OnInit {
   @ViewChild('animatedElement', { static: true }) animatedElement!: ElementRef;
+  @ViewChild('typedOutput', { static: true }) typedOutput!: ElementRef;
+
   testimonial: any;
   emailForm: FormGroup;
   isSubmitted: boolean = false;
@@ -77,6 +80,21 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+    const options = {
+      strings: ['UI Developer', 'Frontend Developer', 'UX Developer'],
+      typeSpeed: 100,
+      backSpeed: 50,
+      startDelay: 500,
+      backDelay: 1000,
+      showCursor: false,
+      cursorChar: '|',
+      loop: true,
+    };
+
+    const typed = new Typed(this.typedOutput.nativeElement, options);
+
+
     gsap.registerPlugin(ScrollTrigger);
 
     const defaults = {
